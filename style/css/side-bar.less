@@ -1,0 +1,63 @@
+
+.side-bar {
+	position: relative;
+	background-color: @colorSideBar;
+	width: 340px;
+	padding: 35px 10px 0 70px;
+	height: 100%;
+	top: 0;
+	left: 0;
+	padding-bottom: 280px; 
+}
+.logo {
+	margin-bottom: 70px;
+}
+.menu-nav {
+
+	&__item {
+		margin: auto; 
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+	
+	&__item-link {
+		display: inline-block;
+		font-size: 21px;
+		color: @colorSideBarText;
+
+		&:hover {
+			color: @colorMain;
+			transition: 0.7s
+		}
+
+		&.active {
+			color: @colorMain;
+		}
+	}
+}
+.page-up {
+	background-color: @colorTopBtn;
+	height: 280px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+
+	&__btn {
+		width: 195px;
+		height: 65px;
+		line-height: 61px;
+		color: @colorMain;
+		text-transform: uppercase;
+		font-size: 18px;
+		border: 2px solid @colorMain;
+		text-align: center;
+		cursor: pointer;
+	}
+}
