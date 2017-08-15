@@ -49,6 +49,8 @@
 					<a class="menu-nav__item-link" href="#">— Спецпредложения</a>
 				</li>
 			</ul>
+
+			<div class="close-aside">- Скрыть меню -</div>
 			
 			<div class="page-up">
 				<div class="page-up__btn">вверх</div>
@@ -64,6 +66,8 @@
 					<a href="" class="nav__item">Доставка</a>
 				</nav>
 				<div class="user-menu">
+					<div class="user-menu__item user-menu__item--round burger-btn">
+					</div>
 					<div class="user-menu__item user-menu__item--round language">Укр</div>
 					<div class="user-menu__item user-menu__item--round profile"></div>
 					<div class="user-menu__item bag"> 
@@ -331,6 +335,20 @@
 			</footer>
 		</main>
 	</div>
+
+	<script type="text/javascript">
+
+		document.addEventListener("DOMContentLoaded", function(){
+			document.querySelector(".burger-btn").addEventListener("click", function(){
+				document.querySelector(".side-bar").classList.add("open")
+			});
+
+			document.querySelector(".close-aside").addEventListener("click", function(){
+				document.querySelector(".side-bar").classList.remove("open")
+			});
+		});
+
+	</script>
 
 </body>
 </html>

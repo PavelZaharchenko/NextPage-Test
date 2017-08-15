@@ -53,6 +53,43 @@
   text-align: center;
   cursor: pointer;
 }
+@media only screen and (max-width: 768px) {
+  .side-bar {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: 0.5s;
+    z-index: 9;
+  }
+  .side-bar.open {
+    transform: translateX(0);
+  }
+  .close-aside {
+    margin-top: 50px;
+    color: #ffffff;
+    transition: 0.5s;
+  }
+  .page-up {
+    display: none;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .side-bar {
+    width: 200px;
+    padding: 15px 10px 0 25px;
+  }
+  .logo {
+    margin-bottom: 20px;
+  }
+  .menu-nav__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .menu-nav__item-link {
+    font-size: 18px;
+  }
+}
 .page-menu {
   display: flex;
   align-items: center;
@@ -104,6 +141,11 @@
 .profile {
   background-image: url(../img/user-icon.png);
 }
+.burger-btn {
+  display: none;
+  background-image: url(../img/burger-btn.png);
+  background-size: 100%;
+}
 .bag {
   padding: 0 20px 0 60px;
   position: relative;
@@ -144,6 +186,50 @@
   color: #babaa8;
   top: 0;
   left: 50px;
+}
+@media only screen and (max-width: 768px) {
+  .page-menu {
+    justify-content: space-between;
+  }
+  .nav__item:not(:last-child) {
+    margin-right: 20px;
+  }
+  .burger-btn {
+    display: block;
+  }
+  .user-menu__item:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .page-menu {
+    padding: 0 20px;
+    height: 60px;
+    justify-content: center;
+  }
+  .nav {
+    display: none;
+  }
+  .user-menu__item {
+    height: 35px;
+  }
+  .user-menu__item--round {
+    width: 35px;
+    border-radius: 50%;
+  }
+  .user-menu__item--round:not(:last-child) {
+    margin-right: 10px;
+  }
+  .burger-btn {
+    display: block;
+  }
+  .bag:before {
+    height: 35px;
+  }
+  .breadcrumbs {
+    padding-left: 35px;
+    padding-top: 30px;
+  }
 }
 .products {
   padding: 25px 60px;
@@ -313,6 +399,32 @@
   border-radius: 50%;
   border: 1px solid #000000;
 }
+@media only screen and (max-width: 500px) {
+  .products {
+    padding: 25px 35px;
+  }
+  .products__title {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+  .product {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .product__name {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+  .product__poster {
+    margin-right: 0;
+  }
+  .product__price {
+    padding-bottom: 20px;
+  }
+  .product__consist {
+    margin-top: 20px;
+  }
+}
 .page-footer {
   height: 280px;
   position: absolute;
@@ -382,6 +494,34 @@
 .sub-footer .bold {
   font-weight: bold;
 }
+@media only screen and (max-width: 500px) {
+  .page-footer {
+    height: auto;
+    position: relative;
+  }
+  .footer-content {
+    padding: 0 25px;
+  }
+  .contact-info {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0px;
+  }
+  .social {
+    justify-content: center;
+  }
+  .sub-footer {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .sub-footer p {
+    width: 100%;
+    font-size: 12px;
+  }
+  .sub-footer p:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
 .neuchaRegular {
   font-family: 'Neucha', cursive;
   font-style: normal;
@@ -415,4 +555,9 @@ body a {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+@media only screen and (max-width: 500px) {
+  .more {
+    margin-bottom: 50px;
+  }
 }

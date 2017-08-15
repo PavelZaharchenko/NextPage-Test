@@ -61,3 +61,52 @@
 		cursor: pointer;
 	}
 }
+@media @tablet {
+	.side-bar {
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		left: 0;
+		transform: translateX(-100%);
+		transition: 0.5s;
+		z-index: 9;
+
+	    &.open {
+			transform: translateX(0);
+		}
+	}
+	.close-aside {
+		margin-top: 50px;
+		color: @colorMain;;
+		transition: 0.5s;
+	}
+	.page-up {
+		display: none;
+	}
+}
+
+@media @mobile {
+	.side-bar {
+		width: 200px;
+    	padding: 15px 10px 0 25px;
+	}
+	.logo {
+	    margin-bottom: 20px;
+	}
+	// .menu-nav__item {
+	// 	margin-bottom: 10px;
+	// }
+	// .menu-nav__item-link {
+	// 	font-style: 18px;
+	// }
+	.menu-nav {
+		&__item {
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
+		&__item-link {
+			font-size: 18px;
+		}
+	}
+}

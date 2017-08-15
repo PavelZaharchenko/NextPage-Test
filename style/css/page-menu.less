@@ -52,6 +52,11 @@
 .profile {
 	background-image: url(../img/user-icon.png);
 }
+.burger-btn {
+	display: none;
+	background-image: url(../img/burger-btn.png);
+	background-size: 100%;
+}
 .bag {
 	padding: 0 20px 0 60px; 
 	position: relative;
@@ -96,5 +101,73 @@
 			top: 0;
 			left: 50px;
 		}
+	}
+}
+
+
+@media @tablet {
+	.page-menu {
+		justify-content: space-between;
+	}
+
+	.nav {
+		&__item {
+			&:not(:last-child) {
+	    		margin-right: 20px;
+	    	}
+		}
+	}
+
+	.burger-btn {
+		display: block;
+	}
+
+	.user-menu {
+		&__item {
+
+			&:not(:last-child) {
+	    		margin-right: 20px;
+	    	}
+		}
+	}
+}
+
+@media @mobile {
+	.page-menu {
+		padding: 0 20px;
+		height: 60px;
+		justify-content: center;
+	}
+
+	.nav {
+		display: none;
+	}
+
+	.user-menu {
+		&__item {
+			height: 35px;
+			&--round {
+				width: 35px;
+				border-radius: 50%;
+					&:not(:last-child) {
+		    		margin-right: 10px;
+		    	}
+			}
+		}
+	}
+
+	.burger-btn {
+		display: block;
+	}
+
+	.bag {
+		&:before {
+			height: 35px;
+		}
+	}
+	
+	.breadcrumbs {
+		padding-left: 35px;
+    	padding-top: 30px;
 	}
 }
